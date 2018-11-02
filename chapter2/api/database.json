@@ -1,0 +1,75 @@
+{
+  "legoToSave": [
+    {
+      "id": 1,
+      "creator": "Per Sun",
+      "color": "Black",
+      "shape": "Animal",
+      "creation": "Black Cow"
+    },
+    {
+      "creator": "kajnsd",
+      "color": "askjd",
+      "shape": "adsknj",
+      "creation": "ajkds",
+      "id": 2
+    },
+    {
+      "creator": "sda",
+      "color": "5",
+      "shape": "asd",
+      "creation": "ddd",
+      "id": 3
+    },
+    {
+      "creator": "asdf",
+      "color": "1",
+      "shape": "asdf",
+      "creation": "sda",
+      "id": 4
+    },
+    {
+      "creator": "tanner",
+      "color": "5",
+      "shape": "pizza",
+      "creation": "god",
+      "id": 5
+    },
+    {
+      "creator": "sama",
+      "color": "5",
+      "shape": "eagle",
+      "creation": "gus",
+      "id": 6
+    },
+    {
+      "creator": "f",
+      "color": "Yellow",
+      "shape": "f",
+      "creation": "b",
+      "id": 7
+    },
+    {
+      "creator": "BAM",
+      "color": "Green",
+      "shape": "BOOM",
+      "creation": "BOOEY",
+      "id": 8
+    },
+    {
+      "creator": "Sam",
+      "color": "Blue",
+      "shape": "Rectangle",
+      "creation": "R2-D2",
+      "id": 9
+    }
+  ],
+  "colors": [
+    "Red",
+    "Green",
+    "Yellow",
+    "Blue",
+    "Orange",
+    "Black"
+  ]
+}
