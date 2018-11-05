@@ -1,0 +1,180 @@
+{
+    "fieldsets": [
+        {
+            "element_type": "fieldset",
+            "attributes_list": [],
+            "child_elements": [
+                {
+                    "element_type": "label",
+                    "text_content": "Date of entry",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "for",
+                            "attribute_value": "journalDate"
+                        }
+                    ]
+                },
+                {
+                    "element_type": "br",
+                    "attributes_list": []
+                },
+                {
+                    "element_type": "input",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "type",
+                            "attribute_value": "date"
+                        },
+                        {
+                            "attribute_name": "name",
+                            "attribute_value": "journalDate"
+                        },
+                        {
+                            "attribute_name": "id",
+                            "attribute_value": "journalDate"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "element_type": "fieldset",
+            "attributes_list": [],
+            "child_elements": [
+                {
+                    "element_type": "label",
+                    "text_content": "Concepts covered",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "for",
+                            "attribute_value": "conceptsCovered"
+                        }
+                    ]
+                },
+                {
+                    "element_type": "br",
+                    "attributes_list": []
+                },
+                {
+                    "element_type": "input",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "type",
+                            "attribute_value": "text"
+                        },
+                        {
+                            "attribute_name": "name",
+                            "attribute_value": "conceptsCovered"
+                        },
+                        {
+                            "attribute_name": "id",
+                            "attribute_value": "conceptsCovered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "element_type": "fieldset",
+            "attributes_list": [],
+            "child_elements": [
+                {
+                    "element_type": "label",
+                    "text_content": "Journal entry",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "for",
+                            "attribute_value": "journalEntry"
+                        }
+                    ]
+                },
+                {
+                    "element_type": "br",
+                    "attributes_list": []
+                },
+                {
+                    "element_type": "textarea",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "name",
+                            "attribute_value": "message"
+                        },
+                        {
+                            "attribute_name": "rows",
+                            "attribute_value": "1"
+                        },
+                        {
+                            "attribute_name": "cols",
+                            "attribute_value": "30"
+                        },
+                        {
+                            "attribute_name": "id",
+                            "attribute_value": "journalEntry"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "element_type": "fieldset",
+            "attributes_list": [],
+            "child_elements": [
+                {
+                    "element_type": "label",
+                    "text_content": "Mood for the day",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "for",
+                            "attribute_value": "moodForTheDay"
+                        }
+                    ]
+                },
+                {
+                    "element_type": "br",
+                    "attributes_list": []
+                },
+                {
+                    "element_type": "select",
+                    "attributes_list": [
+                        {
+                            "attribute_name": "id",
+                            "attribute_value": "moodForTheDay"
+                        }
+                    ],
+                    "child_elements": [
+                        {
+                            "element_type": "option",
+                            "text_content": "Happy",
+                            "attributes_list": [
+                                {
+                                    "attribute_name": "value",
+                                    "attribute_value": "happy"
+                                }
+                            ]
+                        },
+                        {
+                            "element_type": "option",
+                            "text_content": "Sad",
+                            "attributes_list": [
+                                {
+                                    "attribute_name": "value",
+                                    "attribute_value": "sad"
+                                }
+                            ]
+                        },
+                        {
+                            "element_type": "option",
+                            "text_content": "Ok",
+                            "attributes_list": [
+                                {
+                                    "attribute_name": "value",
+                                    "attribute_value": "ok"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

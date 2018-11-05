@@ -10,30 +10,12 @@
 <body>
     <h1>Daily Journal</h1>
     <form action="" id="form" required>
-        <fieldset>
-            <label for="journalDate">Date of entry</label><br/>
-            <input type="date" name="journalDate" id="journalDate">
-        </fieldset>
-        <fieldset>
-            <label for="conceptsCovered">Concepts covered</label><br/>
-            <input type="text" id="conceptsCovered">
-        </fieldset>
-        <fieldset>
-            <label for="journalEntry">Journal Entry</label><br/>
-            <textarea name="message" rows="1" cols="30" id="journalEntry"></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="moodForTheDay">Mood for the day</label><br/>
-                <select id="moodForTheDay">
-                        <option value="happy">Happy</option>
-                        <option value="sad">Sad</option>
-                        <option value="ok">Ok</option>
-                </select>
-         </fieldset>
+        
     </form>
     <input id="journalEntrySave" type="submit" value="Record Journal Entry">
     <article id="entryLog"></article>
     <script src="scripts/data.js"></script>
+    <script src="scripts/forms.js"></script>
     <script src="scripts/entryComponent.js"></script>
     <script src="scripts/entriesDOM.js"></script>
     <script src="scripts/journal.js"></script>

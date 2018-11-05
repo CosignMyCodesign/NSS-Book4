@@ -27,6 +27,20 @@
       "entry": "Candy",
       "mood": "happy",
       "id": 4
+    },
+    {
+      "date": "2018-11-02",
+      "concept": "Jimmy Johns",
+      "entry": "Beach Club",
+      "mood": "happy",
+      "id": 5
+    },
+    {
+      "date": "2018-11-03",
+      "concept": "Wilson!!!!!!!!!!",
+      "entry": "he's my only friend",
+      "mood": "sad",
+      "id": 6
     }
   ]
 }
