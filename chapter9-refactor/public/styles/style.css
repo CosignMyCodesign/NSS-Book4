@@ -1,0 +1,11 @@
+body {
+    color: red;
+}
+
+.submit_state > .update_contact {
+    display: none;
+}
+
+.edit_state > .submit_contact {
+    display: none;
+}

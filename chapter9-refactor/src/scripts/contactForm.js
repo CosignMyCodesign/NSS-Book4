@@ -19,7 +19,7 @@ export default class ContactForm {
                 },
                 {
                     "attribute_name": "class",
-                    "attribute_value": "new_contact_form"
+                    "attribute_value": "new_contact_form submit_state"
                 }
             ]
         }
@@ -146,7 +146,7 @@ export default class ContactForm {
             ]
         }
 
-        let buttonDefinition = {
+        let submitButtonDefinition = {
             "element_type": "button",
             "text_content": "Submit New Contact",
             "attribute_descriptions": [
@@ -154,6 +154,30 @@ export default class ContactForm {
                     "attribute_name": "class",
                     "attribute_value": "btn submit_contact"
                 }
+            ]
+        }
+
+        let updateButtonDefinition = {
+            "element_type": "button",
+            "text_content": "Update Contact",
+            "attribute_descriptions": [
+                {
+                    "attribute_name": "class",
+                    "attribute_value": "btn update_contact"
+                }
+            ]
+        }
+        let hiddenSelector = {
+            "element_type": "input",
+            "attributes_descriptions": [
+                {
+                    "attribute_name": "type",
+                    "attribute_value": "hidden"
+                },
+                {
+                    "attribute_name": "id",
+                    "attribute_value": "contact_id"
+                },
             ]
         }
 
@@ -167,8 +191,9 @@ export default class ContactForm {
         let phoneNumberFieldset = ElementBuilder.buildHTMLElement(fieldsetPhoneNumberDefinition.element_type, fieldsetPhoneNumberDefinition.attribute_descriptions)
         let phoneNumberLabel = ElementBuilder.buildHTMLElement(labelPhoneNumberDefinition.element_type, labelPhoneNumberDefinition.attribute_descriptions, labelPhoneNumberDefinition.text_content)
         let phoneNumberInput = ElementBuilder.buildHTMLElement(inputPhoneNumberDefinition.element_type, inputPhoneNumberDefinition.attribute_descriptions)
-        let buttonMaker = ElementBuilder.buildHTMLElement(buttonDefinition.element_type, buttonDefinition.attribute_descriptions, buttonDefinition.text_content)
-
+        let submitButton = ElementBuilder.buildHTMLElement(submitButtonDefinition.element_type, submitButtonDefinition.attribute_descriptions, submitButtonDefinition.text_content)
+        let updateButton = ElementBuilder.buildHTMLElement(updateButtonDefinition.element_type, updateButtonDefinition.attribute_descriptions, updateButtonDefinition.text_content)
+        let hiddenElement = ElementBuilder.buildHTMLElement(hiddenSelector.element_type, hiddenSelector.attributes_descriptions)
         nameFieldset.appendChild(nameLabel)
         nameFieldset.appendChild(nameInput)
 
@@ -181,10 +206,12 @@ export default class ContactForm {
         newForm.appendChild(nameFieldset)
         newForm.appendChild(addressFieldset)
         newForm.appendChild(phoneNumberFieldset)
-        newForm.appendChild(buttonMaker)
+        newForm.appendChild(hiddenElement)
+        newForm.appendChild(submitButton)
+        newForm.appendChild(updateButton)
 
 
-        buttonMaker.addEventListener("click", () => {
+        submitButton.addEventListener("click", () => {
             const newContactName = document.querySelector("#contact__name").value
             const newContactAddress = document.querySelector("#contact__address").value
             const newContactPhoneNumber = document.querySelector("#contact__phone_number").value
@@ -196,6 +223,25 @@ export default class ContactForm {
             }
 
             ContactCollection.postAPI("http://localhost:8088/contactList", new_contact).then(
+                window.location.reload("http://localhost:8080")
+            )
+        })
+
+        updateButton.addEventListener("click", () => {
+            document.querySelector("#new_contact_form").classList.remove("edit_state")
+            document.querySelector("#new_contact_form").classList.add("submit_state")
+            const newContactName = document.querySelector("#contact__name").value
+            const newContactAddress = document.querySelector("#contact__address").value
+            const newContactPhoneNumber = document.querySelector("#contact__phone_number").value
+            const selectedContactId = document.querySelector("#contact_id").value
+
+            const updated_contact = {
+                name: newContactName,
+                address: newContactAddress,
+                phone_number: newContactPhoneNumber
+            }
+
+            ContactCollection.patchAPI(`http://localhost:8088/contactList/${selectedContactId}`, updated_contact).then(
                 window.location.reload("http://localhost:8080")
             )
         })

@@ -27,7 +27,7 @@ export default class Contact {
             "attributes_descriptions": [
                 {
                     "attribute_name": "class",
-                    "attribute_value": "name"
+                    "attribute_value": `contact_${this.id}`
                 }
             ]
         }
@@ -51,10 +51,9 @@ export default class Contact {
                 }
             ]
         }
-
         let updateButtonDefinition = {
             "element_type": "button",
-            "text_content": "Update This Contact",
+            "text_content": "Edit This Contact",
             "attributes_descriptions": [
                 {
                     "attribute_name": "class",
@@ -62,8 +61,6 @@ export default class Contact {
                 }
             ]
         }
-
-
         let deleteButtonDefinition = {
             "element_type": "button",
             "text_content": "Delete This Contact",
@@ -99,21 +96,15 @@ export default class Contact {
         divContact.appendChild(updateButton)
         divContact.appendChild(deleteButton)
 
-        // updateButton.addEventListener("click", () => {
-        //     const newContactName = document.querySelector("#contact__name").value
-        //     const newContactAddress = document.querySelector("#contact__address").value
-        //     const newContactPhoneNumber = document.querySelector("#contact__phone_number").value
+        updateButton.addEventListener("click", () => {
+            document.querySelector("#contact__name").value = this.name
+            document.querySelector("#contact__address").value = this.address
+            document.querySelector("#contact__phone_number").value = this.phone_number
+            document.querySelector("#contact_id").value = this.id
 
-        //     const new_contact = {
-        //         name: newContactName,
-        //         address: newContactAddress,
-        //         phone_number: newContactPhoneNumber
-        //     }
-
-        //     ContactCollection.postAPI("http://localhost:8088/contactList", new_contact).then(
-        //         window.location.reload("http://localhost:8080")
-        //     )
-        // })
+            document.querySelector("#new_contact_form").classList.remove("submit_state")
+            document.querySelector("#new_contact_form").classList.add("edit_state")
+        })
 
         deleteButton.addEventListener("click", () => {
             ContactCollection.deleteAPI(`http://localhost:8088/contactList/${this.id}`).then(
