@@ -1,16 +1,10 @@
 {
   "contactList": [
     {
-      "id": 1,
-      "name": "Big Bird",
-      "address": "939 Sesame St., Nashville, TN 37203",
-      "phone_number": "1234567890"
-    },
-    {
-      "name": "Sama",
-      "address": "Corgiville",
-      "phone_number": "222-111-1123",
-      "id": 2
+      "name": "Vera",
+      "address": "Tanner's House",
+      "phone_number": "123-Dog-Bone",
+      "id": 3
     }
   ]
 }

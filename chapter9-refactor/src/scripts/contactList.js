@@ -36,11 +36,10 @@ export default class ContactList {
 
         ContactCollection.getAPI("http://localhost:8088/contactList").then((contactList) => {
             contactList.forEach((contact) => {
-                let currentContact = new Contact(contact.name, contact.address, contact.phone_number)
+                let currentContact = new Contact(contact.name, contact.address, contact.phone_number, contact.id)
                 let currentContactDisplay = currentContact.buildContactDisplay()
 
                 let listed_contact = ElementBuilder.buildHTMLElement(listDefinition.element_type, listDefinition.attributes_descriptions)
-
                 listed_contact.appendChild(currentContactDisplay)
                 unordered_contact_list.appendChild(listed_contact)
             })

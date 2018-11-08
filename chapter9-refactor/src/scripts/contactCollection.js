@@ -31,6 +31,8 @@ export default class ContactCollection {
     }
     // delete
     static deleteAPI(url) {
-        fetch(url, {method: "DELETE"})
+        return fetch(url, {
+            method: "DELETE"
+        })
     }
 }
